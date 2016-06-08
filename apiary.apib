@@ -1,80 +1,80 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
 
 # travellerct
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+Travellerct is a simple API for generating, saving, and retrieving Traveller (CT) role playing game data.
 
-## Questions Collection [/questions]
+## Characters Collection [/characters]
 
-### List All Questions [GET]
+### List All Characters [GET]
+
+List short form detail on all characters.
 
 + Response 200 (application/json)
 
         [
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
+                "character_id": 1
+                "name": "Hoju",
+                "title": "Count",
+                "strength": 8,
+                "dexterity": 8,
+                "endurance": 8,
+                "intelligence": 8,
+                "education": 8,
+                "social": 14
             }
         ]
 
-### Create a New Question [POST]
+### Generate New Character [POST]
 
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
+You may generate new characters using this action.
+This action takes a JSON payload as part of the request.
+Response then return specific header and body.
 
 + Request (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
+            "name": "El Barto"
         }
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Location: /characters/2
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+                "character_id": 2
+                "name": "El Barto",
+                "title": "Duke",
+                "strength": 8,
+                "dexterity": 8,
+                "endurance": 8,
+                "intelligence": 8,
+                "education": 8,
+                "social": 14
             }
+            
+## Character [/characters/{character_id}]
+
++ Parameters
+    + character_id (number) - ID of the Character in the form of an integer.
+    
+### View a Characters Detail [GET]
+
++ Response 200 (application/json)
+
+        {
+                "character_id": 2
+                "name": "El Barto",
+                "title": "Duke",
+                "strength": 8,
+                "dexterity": 8,
+                "endurance": 8,
+                "intelligence": 8,
+                "education": 8,
+                "social": 14
+        }

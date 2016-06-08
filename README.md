@@ -10,4 +10,10 @@ The things I'm trying to learn here are:
 * [AngularJS](https://angularjs.org) HTML enhanced for web apps.
 * [Slim](http://www.slimframework.com) a micro framework for PHP.
 
-## Characters
+## API
+
+The API is documented at [docs.travellerct.apiary.io] (http://docs.travellerct.apiary.io)
+
+## Database
+
+SQL scripts to create and populate the database with sample data are contained in the sql directory.

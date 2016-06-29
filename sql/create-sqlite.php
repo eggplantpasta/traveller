@@ -2,7 +2,7 @@
 $pdo = new PDO('sqlite:travellerct.sqlite3');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-// create our tables
+// create our tables and insert data if table empty
 $sql = <<<'EOD'
 create table if not exists character (
   character_id integer primary key
@@ -27,7 +27,7 @@ insert into character (name, title, strength, dexterity, endurance, intelligence
 EOD;
 $result = $pdo->exec($sql);
 
-// display the data when debugging
-//foreach ($pdo->query('select * from character') as $row) {
-//    var_dump($row);
-//}
+// display the tables
+foreach($pdo->query("select name from sqlite_master where type='table'") as $row) {
+    echo htmlentities($row['name']);
+}

@@ -1,5 +1,5 @@
 # Traveller Tools (CT)
-Tools for playing [Traveller](https://en.wikipedia.org/wiki/Traveller_(role-playing_game)) (CT)
+Tools for playing Classic [Traveller](https://en.wikipedia.org/wiki/Traveller_(role-playing_game)).
 
 ## NOTE
 This repo contains code that is unlikely to work. I've been using the RPG game Traveller for many years as a programming task for learning new languages and frameworks. It'll probably only be of interest to me.
@@ -11,6 +11,7 @@ The things I'm trying to learn here are:
 * [Slim 3](http://www.slimframework.com) a micro framework for PHP.
 * [PHP The Right Way](http://www.phptherightway.com/) modern PHP best practices.
 * [SQLite](https://www.sqlite.org/) a built in single file or in memory database.
+* [DB Browser for SQLite](http://sqlitebrowser.org) a GUI browser for SQLite.
 
 ## API
 

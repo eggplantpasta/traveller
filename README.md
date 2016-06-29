@@ -1,4 +1,4 @@
-# Traveller Tools
+# Traveller Tools (CT)
 Tools for playing [Traveller](https://en.wikipedia.org/wiki/Traveller_(role-playing_game)) (CT)
 
 ## NOTE
@@ -19,10 +19,10 @@ The API is documented at [docs.travellerct.apiary.io] (http://docs.travellerct.a
 ## Database
 
 Scripts to create and populate an SQLite database with sample data are contained in the sql directory.
-To execute them navigate to the project root and use the built in PHP web server:
+To execute them, from the command line, cd to the project root directory and start the built in PHP web server:
 
 ```shell
 php -S localhost:8000 -t sql/
 ```
 
-Then navigate to the [create script](http://localhost:8000/create-db.php) to create the database and it's objects and populate it with sample data.
+Then, in a web browser, navigate to the [create script](http://localhost:8000/create-sqlite.php) to create the database and it's objects and populate it with sample data. This is a non-destructive script and will leave existing data untouched.

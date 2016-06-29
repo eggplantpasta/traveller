@@ -11,7 +11,7 @@ The things I'm trying to learn here are:
 * [Slim 3](http://www.slimframework.com) a micro framework for PHP.
 * [PHP The Right Way](http://www.phptherightway.com/) modern PHP best practices.
 * [SQLite](https://www.sqlite.org/) a built in single file or in memory database.
-* [DB Browser for SQLite](http://sqlitebrowser.org) a GUI browser for SQLite.
+* [DB Browser for SQLite](http://sqlitebrowser.org) a GUI browser for SQLite. Install via `brew cask install sqlitebrowser`.
 
 ## API
 

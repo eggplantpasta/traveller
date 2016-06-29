@@ -22,15 +22,21 @@ EOD;
 $result = $pdo->exec($sql);
 
 // prepare the data and insert it
-$sql = <<<'EOD'
-insert into character (name, title, strength, dexterity, endurance, intelligence, education, social) values
-  ('Hoju', 'Count', 8, 15, 8, 12, 12, 14),
-  ('Smith', '', 8, 15, 8, 10, 6, 7),
-  ('Neo', '', 8, 9, 8, 14, 3, 8)
+if (isset($_GET['sampledata']) && $_GET['sampledata'] == 'yes') {
+    print 'Insering sample data.<br>';
+
+    $sql = <<<'EOD'
+    insert into character (name, title, strength, dexterity, endurance, intelligence, education, social) values
+      ('Hoju', 'Count', 8, 15, 8, 12, 12, 14),
+      ('Smith', '', 8, 15, 8, 10, 6, 7),
+      ('Neo', '', 8, 9, 8, 14, 3, 8)
 EOD;
-$result = $pdo->exec($sql);
+    $result = $pdo->exec($sql);
+    print $result.' rows inserted into table character.<br>';
+}
 
 // display the tables
+print 'All tables in database:<br>';
 foreach($pdo->query("select name from sqlite_master where type='table'") as $row) {
-    echo htmlentities($row['name']);
+    print htmlentities($row['name']).'<br>';
 }

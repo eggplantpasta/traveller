@@ -13,13 +13,12 @@ if ($tables) {
         try {
             // drop the table
             $pdo->exec('drop table '.$row['name']);
-            echo 'Table '.$row['name'].' dropped.';
+            echo 'Table '.$row['name'].' dropped.<br>'.PHP_EOL;
         } catch (Exception $e) {
             // report error keep dropping
-            echo 'Table '.$row['name'].' not dropped: ';
-            echo $e->getMessage();
+            echo 'Table '.$row['name'].' not dropped: '.$e->getMessage().'<br>'.PHP_EOL;
         }
     }
 } else {
-    echo 'No tables exist to drop.';
+    echo 'No tables exist to drop.<br>'.PHP_EOL;
 }

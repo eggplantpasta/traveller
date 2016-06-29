@@ -8,4 +8,4 @@ create table if not exists character (
 , intelligence integer
 , education integer
 , social integer
-);
+)

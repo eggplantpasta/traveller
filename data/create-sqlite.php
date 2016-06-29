@@ -1,4 +1,7 @@
 <?php
+// prevent caching
+header("Expires: Tue, 03 Jul 2001 06:00:00 GMT");
+
 $pdo = new PDO('sqlite:travellerct.sqlite3');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

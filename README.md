@@ -23,12 +23,12 @@ Scripts to create and populate an SQLite database with sample data are contained
 To execute them, from the command line, cd to the project root directory and start the built in PHP web server:
 
 ```shell
-php -S localhost:8000 -t sql/
+php -S localhost:8000 -t data/
 ```
 
 Then, in a web browser, navigate to the [create script](http://localhost:8000/create-sqlite.php?sampledata=yes) to create the database and it's objects and populate it with sample data. The utility scripts in this directory are detailed below.
 
-* [create-sqlite.php](http://localhost:8000/create-sqlite.php) non-destructively create database objects.
-* [create-sqlite.php?sampledata=yes](http://localhost:8000/create-sqlite.php?sampledata=yes) non-destructively create database objects with sample data. This will leave any existing data untouched, inserting new rows only. If you want a fresh database use one of the scripts below.
+* [create-sqlite.php](http://localhost:8000/create-sqlite.php) non-destructively creates database objects.
+* [create-sqlite.php?sampledata=yes](http://localhost:8000/create-sqlite.php?sampledata=yes) non-destructively creates database objects with sample data. This will leave any existing data untouched, inserting new rows only. If you want a fresh database use one of the scripts below.
 * [drop-sqlite.php](http://localhost:8000/drop-sqlite.php) clears the database, dropping all database objects and data.
 * [delete-sqlite.php](http://localhost:8000/drop-sqlite.php) deletes all data leaving tables empty.

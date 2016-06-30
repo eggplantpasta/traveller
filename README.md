@@ -30,5 +30,5 @@ Then, in a web browser, navigate to the [create script](http://localhost:8000/cr
 
 * [create-sqlite.php](http://localhost:8000/create-sqlite.php) non-destructively creates database objects.
 * [create-sqlite.php?sampledata=yes](http://localhost:8000/create-sqlite.php?sampledata=yes) non-destructively creates database objects with sample data. This will leave any existing data untouched, inserting new rows only. If you want a fresh database use one of the scripts below.
-* [drop-sqlite.php](http://localhost:8000/drop-sqlite.php) clears the database, dropping all database objects and data.
-* [delete-sqlite.php](http://localhost:8000/drop-sqlite.php) deletes all data leaving tables empty.
+* [destroy-sqlite.php?statement=drop](http://localhost:8000/destroy-sqlite.php?statement=drop) clears the database, dropping all database objects and data.
+* [destroy-sqlite.php](http://localhost:8000/destroy-sqlite.php) deletes all data leaving tables empty.

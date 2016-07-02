@@ -2,14 +2,20 @@ FORMAT: 1A
 
 # travellerct
 
-Travellerct is a simple API for generating, modifying, saving, and retrieving Classic Traveller (CT) role playing game data.
+Travellerct is a simple API for generating and managing Classic Traveller (CT) role playing game data.
+
+# Group Characters
+
+Resources related to characters in the API.
 
 ## Character Collection [/characters]
+
+
 
 ### List All Characters [GET]
 
 List full detail on all characters.
-The universal personality profile (UPP) is represented by an integer from 1 to 14.
+The universal personality profile (UPP) is represented by an integer from 1 to 15.
 
 + Response 200 (application/json)
 
@@ -85,11 +91,34 @@ The response body contains full character data;
                 "social": 14
         }
 
-### Delete [DELETE]
+### Update a Character's Detail [PUT]
 
 + Parameters
     + question_id (number) - ID of the Question in the form of an integer
 
-### Delete [DELETE]
+### Update a Character's Detail [PUT]
 
 + Response 204
+
+### Delete a Character [DELETE]
+
++ Parameters
+    + question_id (number) - ID of the Question in the form of an integer
+
+### Delete a Character [DELETE]
+
++ Response 204
+
+# Data Structures
+
+## Character (object)
+
++ character_id: 2 (number, required) - The unique identifier for a character.
++ name: El Barto (string, required) - Name of the character.
++ title: Duke (string) - Hereditary title.
++ strength: 8 (number) - Strength is both a general evaluation of the character's physical ability, and a specific measure of force which may be applied.
++ dexterity: 8 (number) - Dexterity measures physical coordination.
++ endurance: 8 (number) - Endurance measures physical determination and stamina.
++ intelligence: 8 (number) - Intelligence corresponds to IQ.
++ education: 8 (number) - Education indicates the highest level of schooling attained.
++ social: 14 (number) - Social Standing notes the social class and level of society from which the character comes.

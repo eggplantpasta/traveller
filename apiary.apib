@@ -2,13 +2,14 @@ FORMAT: 1A
 
 # travellerct
 
-Travellerct is a simple API for generating, saving, and retrieving Traveller (CT) role playing game data.
+Travellerct is a simple API for generating, modifying, saving, and retrieving Classic Traveller (CT) role playing game data.
 
-## Characters Collection [/characters]
+## Character Collection [/characters]
 
 ### List All Characters [GET]
 
-List short form detail on all characters.
+List full detail on all characters.
+The universal personality profile (UPP) is represented by an integer from 1 to 14.
 
 + Response 200 (application/json)
 
@@ -26,11 +27,16 @@ List short form detail on all characters.
             }
         ]
 
-### Generate New Character [POST]
+### Generate a New Character [POST]
 
 You may generate new characters using this action.
-This action takes a JSON payload as part of the request.
-Response then return specific header and body.
+This action takes a JSON payload, specifying the name of the character, as part of the request.
+The response header contains the location of the newly generated character.
+The response body contains full character data;
+* new unique character_id,
+* name given in the request,
+* a noble title based on the character's social standing,
+* randomly generated (2D roll) universal personality profile (UPP) with initial values from 2 to 12.
 
 + Request (application/json)
 
@@ -78,7 +84,12 @@ Response then return specific header and body.
                 "education": 8,
                 "social": 14
         }
-        
+
+### Delete [DELETE]
+
++ Parameters
+    + question_id (number) - ID of the Question in the form of an integer
+
 ### Delete [DELETE]
 
 + Response 204

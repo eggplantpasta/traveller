@@ -1,0 +1,18 @@
+{
+    "name": "eggplantpasta/travellerct",
+    "description": "API to manage data and support game rules for generating that data for Classic Traveller.",
+    "type": "API",
+    "license": "Apache License V 2.0",
+    "authors": [
+        {
+            "name": "Brett Roper",
+            "email": "roper.brett@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.4"
+    }
+}

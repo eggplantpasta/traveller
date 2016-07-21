@@ -1,5 +1,5 @@
 # Traveller Tools (CT)
-Tools for playing Classic [Traveller](https://en.wikipedia.org/wiki/Traveller_(role-playing_game)).
+API to manage data, and support game rules for generating that data, for Classic [Traveller](https://en.wikipedia.org/wiki/Traveller_(role-playing_game)).
 
 ## NOTE
 This repo contains code that is unlikely to work. I've been using the RPG game Traveller for many years as a programming task for learning new languages and frameworks. It'll probably only be of interest to me.

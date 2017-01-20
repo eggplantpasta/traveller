@@ -1,16 +1,27 @@
 FORMAT: 1A
 
-# travellerct
+# TravellerCT (v1) API
 
 Travellerct is a simple API for generating and managing Classic Traveller (CT) role playing game data.
 
 # Group Characters
 
-Resources related to player and non-player characters. Provides for the 
-* automatic generation or character data for non-player characters (NPC), 
+Resources related to player and non-player characters. Provides for the
+* automatic generation or character data for non-player characters (NPC),
 * storage of pre-generated character data for players,
 * update and deletion of stored character data,
 * and retrieval of all character data in bulk as well as indavidually for generation of character data sheets.
+
+<table>
+  <tr>
+    <th>URL</th><th>GET<br>read</th><th>POST<br>create</th><th>PUT<br>update</th><th>DELETE</th>
+  </tr>
+  <tr>
+    <td>/characters</td><td>Returns a list of characters</td><td>Create a new character</td><td>(405)</td><td>(405)</td>
+  <tr>
+    <td>/characters/711</td><td>Returns a specific character</td><td>(405)</td><td>Updates a specific character</td><td>Deletes a specific character</td>
+  </tr>
+</table>
 
 ## Character Collection [/characters]
 
@@ -98,7 +109,7 @@ The response body contains full character data;
 
 + Parameters
     + character_id (number) - ID of the Character in the form of an integer
-    
+
 + Response 200 (application/json)
 
         {
@@ -113,7 +124,7 @@ The response body contains full character data;
                 "social": 14
         }
 
-   
+
 ### Delete a Character [DELETE]
 
 + Parameters

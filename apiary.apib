@@ -1,4 +1,5 @@
 FORMAT: 1A
+HOST: http://travellerct.pudiga.org/api/v1
 
 # TravellerCT (v1) API
 
@@ -31,20 +32,7 @@ List full detail on all characters.
 The universal personality profile (UPP) is represented by an integer from 1 to 15.
 
 + Response 200 (application/json)
-
-        [
-            {
-                "character_id": 1
-                "name": "Hoju",
-                "title": "Count",
-                "strength": 8,
-                "dexterity": 8,
-                "endurance": 8,
-                "intelligence": 8,
-                "education": 8,
-                "social": 14
-            }
-        ]
+  + Attributes (array[Character])
 
 ### Generate a New Character [POST]
 

@@ -15,7 +15,10 @@ The things I'm trying to learn here are:
 
 ## API
 
-The API is documented at [docs.travellerct.apiary.io] (http://docs.travellerct.apiary.io)
+The API is available online at [docs.travellerct.apiary.io] (http://docs.travellerct.apiary.io).
+The source [blueprint](https://apiblueprint.org/) file apiary.apib is part of this repository together with an HTML version. this HTML is generated using [aglio](https://github.com/danielgtaylor/aglio).
+
+`aglio --theme-variables slate -i apiary.apib -o apiary.html`
 
 ## Database
 
